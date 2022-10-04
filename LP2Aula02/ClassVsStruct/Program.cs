@@ -21,9 +21,9 @@ namespace ClassVsStruct
 
         }
 
-        static void DoubleHealth(Player p1)
+        private static void DoubleHealth(Player p1)
         {
-            p1.Health = p1.Health * 2;
+            p1.Health *= 2;
         }
     }
 }
