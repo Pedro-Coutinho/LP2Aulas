@@ -14,12 +14,16 @@ namespace ClassVsStruct
 
             Console.WriteLine("-----------");
 
-            player1.Health = 11;
-            player1.Armor = 20;
+            DoubleHealth(player1);
 
             Console.WriteLine($"Player1 Health:{player1.Health} Player1 Armor:{player1.Armor}");
             Console.WriteLine($"Player2 Health:{player2.Health} Player2 Armor:{player2.Armor}");
 
+        }
+
+        static void DoubleHealth(Player p1)
+        {
+            p1.Health = p1.Health * 2;
         }
     }
 }
