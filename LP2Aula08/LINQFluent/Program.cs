@@ -15,11 +15,11 @@ namespace LINQFluent
             int numOFlines = myfile.Count(s => s.Length > 30);
             double average = myfile.Average(s => s.Length);
             bool biggerThan120 = myfile.Any(s => s.Length > 120);
-            IEnumerable<string> stringIEnum = myfile
-                .Where(s => s.Contains('Y'))
-                .Select(s => s.Trim().Split()[0]?.ToUpper());
-            
-            
+            IEnumerable<string> stringIEnum = 
+                from s in myfile
+                where s.Contains('Y')
+                select s.Trim().Split()[0].ToRandomCase();
+
             Console.WriteLine(numOFlines);
             Console.WriteLine(average);
             Console.WriteLine(biggerThan120);
