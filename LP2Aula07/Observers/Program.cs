@@ -12,7 +12,7 @@ namespace Observers
             // The observers
             IObserver<AbstractStringSubject> obs1 = new ConsolePrinter();
             IObserver<AbstractStringSubject> obs2 = new FileSaver("pressed_keys.txt");
-
+            IObserver<AbstractStringSubject> obs3 = new FileSaver("Teste.txt");
             // Register observers
             kr.RegisterObserver(obs1);
             kr.RegisterObserver(obs2);
